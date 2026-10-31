@@ -1,4 +1,4 @@
-# 我的記帳本 — iOS Liquid Glass
+# 記帳app — iOS Liquid Glass
 
 這是一個 SwiftUI 的 iOS 記帳 App 原型，依照需求製作：
 

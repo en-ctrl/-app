@@ -26,7 +26,7 @@ struct HomeView: View {
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("我的記帳本")
+                Text("記帳app")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                 Text("記錄每一筆，掌握每一分")
                     .foregroundStyle(.secondary)
