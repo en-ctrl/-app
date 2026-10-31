@@ -1,0 +1,23 @@
+{
+  "app_name": "我的記帳本",
+  "platform": "iOS / SwiftUI",
+  "style": [
+    "Japanese minimalist",
+    "solid/pastel",
+    "Liquid Glass"
+  ],
+  "appearance": "follows iPhone system light/dark mode",
+  "included": [
+    "BookkeepingApp/BookkeepingAppApp.swift",
+    "BookkeepingApp/Models.swift",
+    "BookkeepingApp/Glass.swift",
+    "BookkeepingApp/ContentView.swift",
+    "BookkeepingApp/HomeView.swift",
+    "BookkeepingApp/AddTransactionView.swift",
+    "BookkeepingApp/StatisticsView.swift",
+    "BookkeepingApp/SearchView.swift",
+    "BookkeepingApp/SettingsView.swift",
+    "BookkeepingApp/README.md",
+    "BookkeepingApp.xcodeproj/project.pbxproj"
+  ]
+}
