@@ -1,22 +1,30 @@
-# 記帳 App（iOS SwiftUI / Liquid Glass）
+# 記帳日記 PWA
 
-## 開啟與執行
-1. 在 Mac 安裝並開啟 Xcode（建議 Xcode 16 或更新版本）。
-2. 解壓縮資料夾，雙擊 `BookkeepingApp.xcodeproj`。
-3. 在 Xcode 上方選擇 iPhone Simulator，或連接自己的 iPhone。
-4. 第一次使用真機時，在 Signing & Capabilities 選擇自己的 Apple 開發者 Team，並將 Bundle Identifier 改成唯一值。
-5. 按 ▶ Run 執行。
+原 iOS SwiftUI 記帳專案已改為純 HTML / CSS / JavaScript 的漸層 Liquid Glass 風格 PWA。無需 Xcode、Node.js、後端或資料庫。
 
-最低部署版本：iOS 17。iOS 26 會使用原生 Liquid Glass；較舊系統使用相容的 Material 樣式。
+## 在 GitHub Pages 發布
+1. 在 GitHub 建立一個新的 **Public** repository（例如 `ledger-pwa`）。
+2. 將本資料夾內所有檔案上傳到 repository 根目錄（`index.html` 必須在最外層）。
+3. 開啟 repository 的 **Settings → Pages**。
+4. 在 **Build and deployment** 選擇 **Deploy from a branch**。
+5. Branch 選 `main`、資料夾選 `/ (root)`，按 **Save**。
+6. 等待部署完成，網址通常是 `https://你的GitHub帳號.github.io/ledger-pwa/`。
 
-## 目前功能
-- 首頁餘額、今日收支、本月收支、最近交易
-- 新增收入／支出、金額、分類、日期時間、備註
-- 統計、搜尋、滑動刪除
-- UserDefaults 本機儲存
-- 系統明暗模式
-- 首頁齒輪可前往設定，「查看全部」可前往搜尋
+## 加到手機主畫面
+- iPhone：用 Safari 開啟 GitHub Pages 網址 → 分享 →「加入主畫面」。
+- Android：用 Chrome 開啟網址 → 選單 →「安裝應用程式」或「加到主畫面」。
+- 桌面 Chrome / Edge：網址列的安裝圖示或瀏覽器選單 → 安裝。
 
-## 尚未完成
-- 設定中的 PDF 匯出目前是說明介面，尚未產生 PDF 檔。
-- 資料僅存在目前裝置的 App 本機空間，尚無 iCloud 同步或帳號備份。
+## 功能
+- 首頁餘額、今日收入／支出、本月收支與最近紀錄
+- 新增收入／支出、分類、金額、日期、備註
+- 分類支出統計、紀錄搜尋與刪除
+- JSON 備份匯出、PDF 收支報表（每月摘要、支出分類、完整交易明細）、清除資料
+- LocalStorage 本機保存、Service Worker 離線快取
+- PWA manifest、獨立視窗顯示、主畫面圖示
+
+## 資料與限制
+所有交易資料存在使用者目前瀏覽器的 LocalStorage。清除瀏覽器網站資料、改用其他瀏覽器或裝置不會自動同步；建議定期使用「設定 → 匯出資料」備份，並可透過「設定 → PDF 報表」列印或另存為 PDF。GitHub Pages 只負責靜態網站託管，不會收到你的交易內容。
+
+## 本機預覽
+Service Worker 與安裝功能需要 HTTPS 或 localhost。可直接用 VS Code Live Server 預覽，或部署到 GitHub Pages。

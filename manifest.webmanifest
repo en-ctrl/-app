@@ -1,0 +1,1 @@
+{"name":"記帳日記","short_name":"記帳日記","description":"簡潔優雅的個人記帳工具","start_url":"./","scope":"./","display":"standalone","orientation":"portrait","background_color":"#edf2f8","theme_color":"#edf2f8","lang":"zh-TW","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
