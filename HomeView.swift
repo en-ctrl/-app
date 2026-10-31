@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var store: BookkeepingStore
     @Binding var showingAdd: Bool
+    @Binding var selectedTab: Int
 
     private let currency = "$"
 
@@ -32,10 +33,15 @@ struct HomeView: View {
                     .foregroundStyle(.secondary)
             }
             Spacer()
-            Image(systemName: "gearshape")
-                .font(.title2)
-                .padding(12)
-                .background(.thinMaterial, in: Circle())
+            Button {
+                selectedTab = 4
+            } label: {
+                Image(systemName: "gearshape")
+                    .font(.title2)
+                    .padding(12)
+                    .background(.thinMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
         }
         .padding(.top, 8)
     }
@@ -130,7 +136,9 @@ struct HomeView: View {
                     Label("最近交易", systemImage: "clock")
                         .font(.headline)
                     Spacer()
-                    Text("查看全部").foregroundStyle(.secondary)
+                    Button("查看全部") { selectedTab = 3 }
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                 }
 
                 if store.transactions.isEmpty {

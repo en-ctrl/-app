@@ -10,7 +10,7 @@ struct ContentView: View {
             AppBackground()
 
             TabView(selection: $selectedTab) {
-                HomeView(showingAdd: $showingAdd)
+                HomeView(showingAdd: $showingAdd, selectedTab: $selectedTab)
                     .tabItem { Label("首頁", systemImage: "house.fill") }
                     .tag(0)
 

@@ -1,25 +1,22 @@
-# 記帳app — iOS Liquid Glass
+# 記帳 App（iOS SwiftUI / Liquid Glass）
 
-這是一個 SwiftUI 的 iOS 記帳 App 原型，依照需求製作：
+## 開啟與執行
+1. 在 Mac 安裝並開啟 Xcode（建議 Xcode 16 或更新版本）。
+2. 解壓縮資料夾，雙擊 `BookkeepingApp.xcodeproj`。
+3. 在 Xcode 上方選擇 iPhone Simulator，或連接自己的 iPhone。
+4. 第一次使用真機時，在 Signing & Capabilities 選擇自己的 Apple 開發者 Team，並將 Bundle Identifier 改成唯一值。
+5. 按 ▶ Run 執行。
 
-- 首頁 / 記帳 / 統計 / 搜尋 / 設定
-- 支出與收入
-- 金額、日期時間、備註、分類
-- 早餐、交通、晚餐、學習、住宿、醫療、其他
-- 本機儲存
-- 首頁統計與最近交易
-- 搜尋與刪除
-- Liquid Glass：iOS 26 使用 `.glassEffect`，舊系統使用 `.ultraThinMaterial`
-- App 外觀跟隨 iPhone 系統明暗設定
-- 日系、素色、簡潔的 UI 方向
+最低部署版本：iOS 17。iOS 26 會使用原生 Liquid Glass；較舊系統使用相容的 Material 樣式。
 
-## 開啟方式
+## 目前功能
+- 首頁餘額、今日收支、本月收支、最近交易
+- 新增收入／支出、金額、分類、日期時間、備註
+- 統計、搜尋、滑動刪除
+- UserDefaults 本機儲存
+- 系統明暗模式
+- 首頁齒輪可前往設定，「查看全部」可前往搜尋
 
-1. 使用 Xcode 建立一個 iOS App 專案。
-2. 將 `BookkeepingApp` 資料夾中的 Swift 檔案加入專案 Target。
-3. 建議 Deployment Target 設為 iOS 17.0；若要使用原生 Liquid Glass，請在 iOS 26 裝置／模擬器執行。
-4. Run。
-
-## 注意
-
-這份 ZIP 是可直接放入 Xcode 的完整 SwiftUI 原始碼包，但目前沒有在本環境替你簽署或編譯成 `.ipa`；App Store / 真機安裝仍需要 Xcode 與 Apple 開發者簽署。
+## 尚未完成
+- 設定中的 PDF 匯出目前是說明介面，尚未產生 PDF 檔。
+- 資料僅存在目前裝置的 App 本機空間，尚無 iCloud 同步或帳號備份。
